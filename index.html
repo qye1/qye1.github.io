@@ -12,7 +12,7 @@
 
         <div class="form__group">
             <input class="form__input" placeholder=" " id="first_name">
-            <label class="form__label">Имя1</label>
+            <label class="form__label">Имя</label>
         </div>
 
         <div class="form__group">
@@ -49,34 +49,35 @@
         create.addEventListener("click", () => {
             document.getElementById("error").innerText="":
             let first_name = document.getElementById("first_name").value;
+            let last_name = document.getElementById("last_name").value;
+            let patronymic = document.getElementById("patronymic").value;
+            let index = document.getElementById("index").value;
+            let city = document.getElementById("city").value;
+            let adress = document.getElementById("adress").value;
             if(first_name.length < 1){
                 document.getElementById("error).innerText = "Введите имя";
-                retrun;
+                return;
             }
-            let last_name = document.getElementById("last_name").value;
             if(last_name.length < 1){
                 document.getElementById("error).innerText = "Введите фамилию";
-                retrun;
+                return;
             }
-            let patronymic = document.getElementById("patronymic").value;
             if(patronymic.length < 1){
                 document.getElementById("error).innerText = "Введите отчество";
-                retrun;
+                return;
             }
-            let index = document.getElementById("index").value;
+            
             if(index.length < 1){
                 document.getElementById("error).innerText = "Введите индекс";
-                retrun;
+                return;
             }
-            let city = document.getElementById("city").value;
             if(city.length < 1){
                 document.getElementById("error).innerText = "Введите город";
-                retrun;
+                return;
             }
-            let adress = document.getElementById("adress").value;
             if(adress.length < 1){
                 document.getElementById("error).innerText = "Введите адресс";
-                retrun;
+                return;
             }
             let data = {first_name:first_name,last_name:last_name,patronymic:patronymic,index:index,city:city,adress:adress};
             tg.expand();
