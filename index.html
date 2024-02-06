@@ -13,7 +13,7 @@
 
         <div class="form__group">
             <input class="form__input" placeholder=" " id="first_name">
-            <label class="form__label">Имя1</label>
+            <label class="form__label">Имя</label>
         </div>
 
         <div class="form__group">
@@ -45,46 +45,44 @@
         <button type="button" class="form__button" id="create">Создать</button>
     </form> 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            let tg=window.Telegram.WebApp;
-            let create = document.getElementById("create");
-            create.addEventListener("click", () => {
-                document.getElementById("error").innerText="";
-                let first_name = document.getElementById("first_name").value;
-                let last_name = document.getElementById("last_name").value;
-                let patronymic = document.getElementById("patronymic").value;
-                let index = document.getElementById("index").value;
-                let city = document.getElementById("city").value;
-                let adress = document.getElementById("adress").value;
-                if(first_name.length < 1){
-                    document.getElementById("error").innerText = "Введите имя";
-                    return;
-                }
-                if(last_name.length < 1){
-                    document.getElementById("error").innerText = "Введите фамилию";
-                    return;
-                }
-                if(patronymic.length < 1){
-                    document.getElementById("error").innerText = "Введите отчество";
-                    return;
-                }
-                if(index.length < 1){
-                    document.getElementById("error").innerText = "Введите индекс";
-                    return;
-                }
-                if(city.length < 1){
-                    document.getElementById("error").innerText = "Введите город";
-                    return;
-                }
-                if(adress.length < 1){
-                    document.getElementById("error").innerText = "Введите адресс";
-                    return;
-                }
-                let data = {first_name:first_name,last_name:last_name,patronymic:patronymic,index:index,city:city,adress:adress};
-                tg.expand();
-                tg.sendData(JSON.stringify(data));
-                tg.close();
-            })
+        let tg=window.Telegram.WebApp;
+        let create = document.getElementById("create");
+        create.addEventListener("click", () => {
+            document.getElementById("error").innerText="";
+            let first_name = document.getElementById("first_name").value;
+            let last_name = document.getElementById("last_name").value;
+            let patronymic = document.getElementById("patronymic").value;
+            let index = document.getElementById("index").value;
+            let city = document.getElementById("city").value;
+            let adress = document.getElementById("adress").value;
+            if(first_name.length < 1){
+                document.getElementById("error").innerText = "Введите имя";
+                return;
+            }
+            if(last_name.length < 1){
+                document.getElementById("error").innerText = "Введите фамилию";
+                return;
+            }
+            if(patronymic.length < 1){
+                document.getElementById("error").innerText = "Введите отчество";
+                return;
+            }
+            if(index.length < 1){
+                document.getElementById("error").innerText = "Введите индекс";
+                return;
+            }
+            if(city.length < 1){
+                document.getElementById("error").innerText = "Введите город";
+                return;
+            }
+            if(adress.length < 1){
+                document.getElementById("error").innerText = "Введите адресс";
+                return;
+            }
+            let data = {first_name:first_name,last_name:last_name,patronymic:patronymic,index:index,city:city,adress:adress};
+            tg.expand();
+            tg.sendData(JSON.stringify(data));
+            tg.close();
         })
     </script>
 </body>
