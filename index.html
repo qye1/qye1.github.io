@@ -12,7 +12,7 @@
 
         <div class="form__group">
             <input class="form__input" placeholder=" " id="first_name">
-            <label class="form__label">Имя</label>
+            <label class="form__label">Имя1</label>
         </div>
 
         <div class="form__group">
@@ -45,22 +45,8 @@
     <script>
         let tg=window.Telegram.WebApp;
         let create = document.getElementById("create");
-         create.addEventListener("click", () => {
+        create.addEventListener("click", () => {
             tg.expand();
-            let first_name = document.getElementById("first_name").value;
-            let last_name = document.getElementById("last_name").value;
-            let patronymic = document.getElementById("patronymic").value;
-            let index = document.getElementById("index").value;
-            let city = document.getElementById("city").value;
-            let adress = document.getElementById("adress").value;
-            let data = {
-                first_name:first_name,
-                last_name:second_name,
-                patronymic:patronymic,
-                index:index,
-                city:city,
-                adress:adress
-            };
             tg.close();
         })
     </script>
