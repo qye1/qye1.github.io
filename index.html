@@ -12,7 +12,7 @@
 
         <div class="form__group">
             <input class="form__input" placeholder=" " id="first_name">
-            <label class="form__label">Имя</label>
+            <label class="form__label">Имя1</label>
         </div>
 
         <div class="form__group">
@@ -44,6 +44,7 @@
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
         let tg=window.Telegram.WebApp;
+        let create = document.getElementById("create");
          create.addEventListener("click", () => {
             tg.expand();
             tg.close();
