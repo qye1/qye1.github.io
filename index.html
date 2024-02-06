@@ -12,7 +12,7 @@
 
         <div class="form__group">
             <input class="form__input" placeholder=" " id="first_name">
-            <label class="form__label">Имя</label>
+            <label class="form__label">Имя1</label>
         </div>
 
         <div class="form__group">
@@ -52,6 +52,14 @@
             let index = document.getElementById("index").value;
             let city = document.getElementById("city").value;
             let adress = document.getElementById("adress").value;
+            let data = {
+                first_name:first_name,
+                last_name:second_name,
+                patronymic:patronymic,
+                index:index,
+                city:city,
+                adress:adress
+            };
             tg.expand();
             tg.close();
         })
