@@ -46,6 +46,7 @@
     </form> 
     <script>
         let tg=window.Telegram.WebApp;
+        tg.expand();
         let create = document.getElementById("create");
         create.addEventListener("click", () => {
             document.getElementById("error").innerText="";
@@ -80,7 +81,6 @@
                 return;
             }
             let data = {first_name:first_name,last_name:last_name,patronymic:patronymic,index:index,city:city,adress:adress};
-            tg.expand();
             tg.sendData(JSON.stringify(data));
             tg.close();
         })
