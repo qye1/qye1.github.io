@@ -12,7 +12,7 @@
 
         <div class="form__group">
             <input class="form__input" placeholder=" " id="first_name">
-            <label class="form__label">Имя2</label>
+            <label class="form__label">Имя</label>
         </div>
 
         <div class="form__group">
@@ -21,22 +21,22 @@
         </div>
 
         <div class="form__group">
-            <input class="form__input" placeholder=" ">
+            <input class="form__input" placeholder=" " id="patronymic">
             <label class="form__label">Отчество</label>
         </div>
 
         <div class="form__group">
-            <input class="form__input" placeholder=" ">
+            <input class="form__input" placeholder=" " id="index">
             <label class="form__label">Индекс</label>
         </div>
 
         <div class="form__group">
-            <input class="form__input" placeholder=" ">
+            <input class="form__input" placeholder=" " id="city">
             <label class="form__label">Город</label>
         </div>
 
         <div class="form__group">
-            <input class="form__input" placeholder=" ">
+            <input class="form__input" placeholder=" " id="adress">
             <label class="form__label">Адрес</label>
         </div>
         <button class="form__button" id="create">Создать</button>
@@ -45,8 +45,14 @@
     <script>
         let tg=window.Telegram.WebApp;
         tg.expand();
-        let create = document.getElementsById("create");
+        let create = document.getElementById("create");
         create.addEventListener("click", () => {
+            let first_name = document.getElementById("first_name").value;
+            let last_name = document.getElementById("last_name").value;
+            let patronymic = document.getElementById("patronymic").value;
+            let index = document.getElementById("index").value;
+            let city = document.getElementById("city").value;
+            let adress = document.getElementById("adress").value;
             tg.close();
         })
     </script>
