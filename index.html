@@ -12,6 +12,7 @@
         let tg=window.Telegram.WebApp;
         document.getElementById("first_name").value=tg.initDataUnsafe.user.first_name;
         document.getElementById("last_name").value=tg.initDataUnsafe.user.last_name;
+        tg.expand();
     </script>
     <form class="form">
         <h1 class="form__title">Новый заказ</h1>
@@ -49,7 +50,7 @@
     </form> 
     
     <script>
-        let create = document.getElementsById("create")
+        let create = document.getElementsById("create");
         create.addEventListener("click", () => {
             tg.close();
         })
