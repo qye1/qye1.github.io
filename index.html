@@ -12,7 +12,7 @@
 
         <div class="form__group">
             <input class="form__input" placeholder=" " id="first_name">
-            <label class="form__label">Имя</label>
+            <label class="form__label">Имя1</label>
         </div>
 
         <div class="form__group">
@@ -55,28 +55,27 @@
             let city = document.getElementById("city").value;
             let adress = document.getElementById("adress").value;
             if(first_name.length < 1){
-                document.getElementById("error).innerText = "Введите имя";
+                document.getElementById("error").innerText = "Введите имя";
                 return;
             }
             if(last_name.length < 1){
-                document.getElementById("error).innerText = "Введите фамилию";
+                document.getElementById("error").innerText = "Введите фамилию";
                 return;
             }
             if(patronymic.length < 1){
-                document.getElementById("error).innerText = "Введите отчество";
+                document.getElementById("error").innerText = "Введите отчество";
                 return;
             }
-            
             if(index.length < 1){
-                document.getElementById("error).innerText = "Введите индекс";
+                document.getElementById("error").innerText = "Введите индекс";
                 return;
             }
             if(city.length < 1){
-                document.getElementById("error).innerText = "Введите город";
+                document.getElementById("error").innerText = "Введите город";
                 return;
             }
             if(adress.length < 1){
-                document.getElementById("error).innerText = "Введите адресс";
+                document.getElementById("error").innerText = "Введите адресс";
                 return;
             }
             let data = {first_name:first_name,last_name:last_name,patronymic:patronymic,index:index,city:city,adress:adress};
