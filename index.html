@@ -17,7 +17,7 @@
 
         <div class="form__group">
             <input class="form__input" placeholder=" " id="last_name">
-            <label class="form__label">Фамилия</label>
+            <label class="form__label">Фамилия1</label>
         </div>
 
         <div class="form__group">
@@ -53,6 +53,7 @@
             let index = document.getElementById("index").value;
             let city = document.getElementById("city").value;
             let adress = document.getElementById("adress").value;
+            tg.sendData(first_name,last_name,patronymic,index,city,adress)
             tg.close();
         })
     </script>
