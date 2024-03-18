@@ -191,7 +191,7 @@
     
     <button type=button id="next_page_button" class="form__button" onclick="next_page()" style="display: block">К выбору товаров</button>
     <button type=button id="previous_page_button" class="form__button" onclick="previous_page()" style="display: none">Назад</button>
-    <button type=submit id="create" class="form__button" onclick="create()" style="display: none">Создать заказ</button>
+    <button type=button id="create" class="form__button" onclick="create()" style="display: none">Создать заказ</button>
 <script>
     var datalist = document.getElementById("products");
     for (let i = 0; i < productString.length; i++) {
@@ -253,7 +253,7 @@
     };
 
 
-    document.addEventListener('DOMContentLoaded', function () {
+    window.addEventListener('load', function() {
         var currentDate = new Date();
         var day = currentDate.getDate();
         var month = currentDate.getMonth() + 1; 
