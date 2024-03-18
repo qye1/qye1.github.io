@@ -473,7 +473,10 @@
                         let product = document.getElementById("product"+i).value;
                         let price = document.getElementById("product_price"+i).value;
                         let price_discount = document.getElementById("product_price_discount"+i).value;
-                        products.push(`${product}/${price}/${price_discount}`)
+                        if (price_discount.trim().length > 0) {
+                            products.push(`${product}/${price}/${price_discount}`)
+                        }
+                        else {products.push(`${product}/${price}/0`)}
                     }
                     let date = document.getElementById("order_date").value;
                     let source = document.getElementById("source").value;
