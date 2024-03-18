@@ -477,6 +477,7 @@
                     }
                     else {products.push(`${product}/${price}/0`)}
                 }
+                let productsString = products.join(', ');
                 let date = document.getElementById("order_date").value;
                 let source = document.getElementById("source").value;
                 let first_name = document.getElementById("customer_name").value;
@@ -509,7 +510,7 @@
                         customer_email: customer_email,
                         customer_sm_adress: customer_sm_adress,
                         pay_type: pay_type,
-                        products: products,
+                        products: productsString,
                         delivery_type: delivery_type,
                         delivery_price: delivery_price,
                         delivery_price_discount: delivery_price_discount,
