@@ -1,0 +1,2 @@
+const productString = [[2, 'w25', 'Parfum Dusita JacCringe Dyhi', '16', '12000'], [3, 'w24', 'Parfum Dusita JacCringe Dyhi', '15', '12000'], [4, 'w23', 'Parfum Dusita Cringerro Dyhi', '14', '12000'], [5, 'w22', 'Parfum Dusita NeCringe Dyhi', '13', '12000'], [6, 'p17', 'Beuafort London Super Dyhi', '15', '12020'], [7, 'p16', 'Laboratorio Olfativo Mega Dyhi', '10', '15600'], [8, 'p15', 'Parfum Dusita Cringe Dyhi', '16', '16000'], [9, 'p14', 'Mason Insect Ultra Dyhi', '15', '13000']]; 
+;
