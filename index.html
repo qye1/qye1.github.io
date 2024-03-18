@@ -467,60 +467,58 @@
                 let tg=window.Telegram.WebApp;
                 tg.expand();
                 let create = document.getElementById("create");
-                create.addEventListener("click", () => {
-                    let products = [];
-                    for (let i=1; i<=counter; i++){
-                        let product = document.getElementById("product"+i).value;
-                        let price = document.getElementById("product_price"+i).value;
-                        let price_discount = document.getElementById("product_price_discount"+i).value;
-                        if (price_discount.trim().length > 0) {
-                            products.push(`${product}/${price}/${price_discount}`)
-                        }
-                        else {products.push(`${product}/${price}/0`)}
+                let products = [];
+                for (let i=1; i<=counter; i++){
+                    let product = document.getElementById("product"+i).value;
+                    let price = document.getElementById("product_price"+i).value;
+                    let price_discount = document.getElementById("product_price_discount"+i).value;
+                    if (price_discount.trim().length > 0) {
+                        products.push(`${product}/${price}/${price_discount}`)
                     }
-                    let date = document.getElementById("order_date").value;
-                    let source = document.getElementById("source").value;
-                    let first_name = document.getElementById("customer_name").value;
-                    let last_name = document.getElementById("customer_surname").value;
-                    let patronymic = document.getElementById("customer_patronymic").value;
-                    let customer_index = document.getElementById("customer_index").value;
-                    let city = document.getElementById("city").value;
-                    let adress = document.getElementById("adress").value; 
-                    let customer_phone = document.getElementById("phone").value;
-                    let customer_email = document.getElementById("email").value;
-                    let customer_sm_adress = document.getElementById("sm_adress").value; 
-                    let pay_type = document.getElementById("pay_type").value;
-                    let delivery_type = document.getElementById("delivery_type_product").value;
-                    let delivery_price = document.getElementById("delivery_price").value;
-                    let pickup_point_adress = document.getElementById("pickup_point_adress_product").value;
-                    let delivery_price_discount = document.getElementById("delivery_price_discount").value;
-                    let additional_info = document.getElementById("additional_info").value;
-                    let total_price = document.getElementById("total").value;
+                    else {products.push(`${product}/${price}/0`)}
+                }
+                let date = document.getElementById("order_date").value;
+                let source = document.getElementById("source").value;
+                let first_name = document.getElementById("customer_name").value;
+                let last_name = document.getElementById("customer_surname").value;
+                let patronymic = document.getElementById("customer_patronymic").value;
+                let customer_index = document.getElementById("customer_index").value;
+                let city = document.getElementById("city").value;
+                let adress = document.getElementById("adress").value; 
+                let customer_phone = document.getElementById("phone").value;
+                let customer_email = document.getElementById("email").value;
+                let customer_sm_adress = document.getElementById("sm_adress").value; 
+                let pay_type = document.getElementById("pay_type").value;
+                let delivery_type = document.getElementById("delivery_type_product").value;
+                let delivery_price = document.getElementById("delivery_price").value;
+                let pickup_point_adress = document.getElementById("pickup_point_adress_product").value;
+                let delivery_price_discount = document.getElementById("delivery_price_discount").value;
+                let additional_info = document.getElementById("additional_info").value;
+                let total_price = document.getElementById("total").value;
 
-                    let data = {
-                            date: date,
-                            source: source,
-                            first_name: first_name,
-                            last_name: last_name,
-                            patronymic: patronymic,
-                            customer_index: customer_index,
-                            city: city,
-                            adress: adress,
-                            customer_phone: customer_phone,
-                            customer_email: customer_email,
-                            customer_sm_adress: customer_sm_adress,
-                            pay_type: pay_type,
-                            products: products,
-                            delivery_type: delivery_type,
-                            delivery_price: delivery_price,
-                            delivery_price_discount: delivery_price_discount,
-                            pickup_point_adress: pickup_point_adress,
-                            additional_info: additional_info,
-                            total_price: total_price
-                        };
-                    tg.sendData(JSON.stringify(data));
-                    tg.close();
-                })
+                let data = {
+                        date: date,
+                        source: source,
+                        first_name: first_name,
+                        last_name: last_name,
+                        patronymic: patronymic,
+                        customer_index: customer_index,
+                        city: city,
+                        adress: adress,
+                        customer_phone: customer_phone,
+                        customer_email: customer_email,
+                        customer_sm_adress: customer_sm_adress,
+                        pay_type: pay_type,
+                        products: products,
+                        delivery_type: delivery_type,
+                        delivery_price: delivery_price,
+                        delivery_price_discount: delivery_price_discount,
+                        pickup_point_adress: pickup_point_adress,
+                        additional_info: additional_info,
+                        total_price: total_price
+                    };
+                tg.sendData(JSON.stringify(data));
+                tg.close();
             }
         }
     </script>
